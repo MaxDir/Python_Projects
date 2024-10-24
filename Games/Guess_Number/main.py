@@ -1,5 +1,13 @@
 from random import randint
 
+
+def check_input(string):
+    if string.isdigit() and 1 <= int(string) <= 100:
+        return True
+    else:
+        return False
+
+
 print('Игра угадай число')
 print('Загадано число от 1 до 100')
 
