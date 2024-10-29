@@ -12,11 +12,10 @@ print('Игра угадай число')
 print('Загадано число от 1 до 100')
 
 random_number = randint(1, 100)
-print(random_number)
 
 flag_game = True
 while flag_game:
-    user_number = input('Введите число: ')
+    user_number = input('\nВведите число: ')
 
     if check_input(user_number):
         if int(user_number) == random_number:
