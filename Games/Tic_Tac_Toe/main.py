@@ -6,5 +6,14 @@ def draw_cells():
     print('---|---|---')
     print(f' {cell[6]} | {cell[7]} | {cell[8]}')
 
-cell = ['', '', '', '', '', '', '', '', '']
+def check_symbol(symbol):
+    if symbol in 'XOХО':
+        return True
+    else:
+        print('[Ошибка] Выберите символ X или O')
+        return False
 
+cell = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+
+input_symbol = input('Выберите символ: ').upper()
+print(check_symbol(input_symbol))
