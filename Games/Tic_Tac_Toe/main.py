@@ -15,5 +15,13 @@ def check_symbol(symbol):
 
 cell = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
-input_symbol = input('Выберите символ: ').upper()
-print(check_symbol(input_symbol))
+symbol_flag = True
+while symbol_flag:
+    input_symbol = input('Выберите символ: ').upper()
+    if check_symbol(input_symbol):
+        if input_symbol in 'XХ':
+            comp_symbol = 'O'
+        elif input_symbol in 'OО':
+            comp_symbol = 'X'
+        symbol_flag = False
+
