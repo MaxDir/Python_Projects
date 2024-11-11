@@ -25,3 +25,10 @@ while symbol_flag:
             comp_symbol = 'X'
         symbol_flag = False
 
+game_flag = True
+while game_flag:
+    input_cell = int(input('Введите номер ячейки: '))
+    cell[input_cell] = input_symbol
+    draw_cells()
+
+
