@@ -13,6 +13,13 @@ def check_symbol(symbol):
         print('[Ошибка] Выберите символ X или O')
         return False
 
+def check_cell(number):
+    if 1 <= number <= 9:
+        return True
+    else:
+        print('[Ошибка] Введите число от 1 до 9 включительно.')
+        return False
+
 cell = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
 symbol_flag = True
