@@ -38,8 +38,23 @@ while symbol_flag:
 
 game_flag = True
 while game_flag:
-    input_cell = int(input('Введите номер ячейки: '))
-    cell[input_cell] = input_symbol
+    step_user_flag = True
+    while step_user_flag:
+        input_cell = int(input('Введите номер ячейки: '))
+        if check_cell(input_cell) and cell[input_cell - 1] == ' ':
+            cell[input_cell - 1] = input_symbol
+            step_user_flag = False
+        elif cell[input_cell - 1] != ' ':
+            print('[!] Выбранная ячейка занята.')
+
+    step_comp_flag = True
+    while step_comp_flag:
+        input_cell = randint(1, 9)
+        print(input_cell)
+        if cell[input_cell - 1] == ' ':
+            cell[input_cell - 1] = comp_symbol
+            step_comp_flag = False
+
     draw_cells()
 
 
