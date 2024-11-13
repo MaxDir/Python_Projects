@@ -1,3 +1,4 @@
+from random import randint
 
 def draw_cells():
     print(f' {cell[0]} | {cell[1]} | {cell[2]}')
@@ -19,6 +20,9 @@ def check_cell(number):
     else:
         print('[Ошибка] Введите число от 1 до 9 включительно.')
         return False
+
+def random_cell():
+    return randint(1, 9)
 
 cell = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
