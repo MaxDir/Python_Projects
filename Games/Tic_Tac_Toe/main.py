@@ -21,8 +21,6 @@ def check_cell(number):
         print('[Ошибка] Введите число от 1 до 9 включительно.')
         return False
 
-def random_cell():
-    return randint(1, 9)
 
 cell = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
@@ -56,5 +54,3 @@ while game_flag:
             step_comp_flag = False
 
     draw_cells()
-
-
